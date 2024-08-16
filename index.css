@@ -1,0 +1,215 @@
+
+/**
+  * ! Changing default style of brower.
+**/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: sans-serif;
+    height: 100%;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+}
+/**
+  * ! Changing style rules for content section.
+**/
+.content {
+    background-color: #f2796d;
+    padding: 20px 20px;
+    width: 50%;
+    justify-content: space-around;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 6px;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+.logo a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fadee2;
+    font-family:  'Courier New', Courier, monospace;
+}
+.image {
+    background-image: url("./images/illustration.svg");
+    height: 65%;
+    border: 2px solid #f2796d;
+    background-repeat: no-repeat;
+    /* margin-bottom: 1rem; */
+    background-position: center;
+    background-size: contain;
+    flex-wrap: wrap;
+}
+.text {
+    text-align: center;
+    color: #fff;
+    padding: 15px;
+    font-size: 25px;
+    font-weight: bold;
+    flex-direction: column;
+}
+/**
+  * ! Changing style rules for form section.
+**/
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* max-width: 400px; */
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    padding: 50px;
+    width: 40%;
+}
+.title {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+form > div > input {
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    outline: none;
+    border: 2px solid #c4c4c4;
+    padding: 0 40px;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+form div {
+    position: relative;
+    margin-bottom: 15px;
+}
+input:focus {
+    border: 2px solid #f2796d;
+}
+/**
+  * ! Style rules for Social section.
+**/
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.btn-1, .btn-2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 2px solid #c3c3c3;
+    width:40%;
+    border-radius: 8px;
+    padding: 10px 5px;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.2);
+}
+.btn-1 a, .btn-2 a {
+    text-decoration: none;
+    color: #f2796d;
+    font-size: 16px;
+    font-weight: 600;
+}
+.btn-1 {
+    background-color: #fff;
+}
+.btn-2 {
+    background-color: #4f70b5;  
+    color: #fff;
+}
+.or {
+    text-align: center;
+}
+span {
+    color: #f2796d;
+    cursor: pointer;
+}
+.question {
+    font-size: 15px;
+}
+
+
+
+
+
+
+
+/**
+  * ! Changing style rules for form icon.
+**/
+form div i {
+    position: absolute;
+    padding: 10px;
+}
+.success-icon, .failure-icon {
+    right: 0;
+    opacity: 0;
+}
+.failure-icon {
+    color: red;
+}
+.success-icon {
+    color: green;
+}
+.error {
+    color: firebrick;
+    font-size: 14.5px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+/**
+  * ! style rules for button.
+**/
+button {
+    width: 100%;
+    height: 45px;
+    background-color: #f2796d;
+    cursor: pointer;
+    border: 2px solid #fd0009;
+    border-radius: 10px;
+    color: #c4c4c4;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 10px 0px;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    transition: all 0.1s ease-in-out;
+}
+button:hover {
+    opacity: 0.8;
+}
+
+
+/**
+  * ! Media Queries are here.
+**/
+@media only screen and (max-width: 700px) {
+    .container {
+        flex-direction: column;
+        /* flex-wrap: wrap; */
+    }
+    form, .content {
+        width: 100% !important;
+    }
+    .btn {
+        flex-direction: column;
+    }
+    .image {
+        height: 70vh;
+    }
+}
+
+
+@media screen and (max-width: 425px) {
+    form {
+        padding: 20px;
+    }
+}
